@@ -9,3 +9,5 @@ bun.lockb
 wrangler.toml
 .assetsignore
 README.md
+references/
+agent-tools/

@@ -3,360 +3,365 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adam Cooper | Portfolio</title>
-  <meta name="description" content="Adam Cooper is a SOC analyst working on threat detection, automated triage, and response. Portfolio for cwpa.dev." />
+  <title>Generic Person | SOC Analyst</title>
+  <meta name="description" content="Generic Person is a SOC analyst focused on threat detection, alert triage, and response. Portfolio for cwpa.dev." />
   <link rel="canonical" href="https://cwpa.dev/" />
-  <meta name="theme-color" content="#f6f3ec" />
-  <meta property="og:title" content="Adam Cooper | Portfolio" />
-  <meta property="og:description" content="Threat detection, automated triage, and response. Projects include a SOAR workflow, TriageRPG, and an AI SIEM dissertation." />
+  <meta name="theme-color" content="#1770b5" />
+  <meta property="og:title" content="Generic Person | SOC Analyst" />
+  <meta property="og:description" content="SOC analyst working on threat detection, alert triage, and response. Remote, UK." />
   <meta property="og:url" content="https://cwpa.dev/" />
   <meta property="og:type" content="profile" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/75052585?v=4" />
+  <meta property="og:image" content="https://cwpa.dev/assets/portrait.jpg" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/home.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Adam Cooper",
+    "name": "Generic Person",
     "url": "https://cwpa.dev/",
-    "email": "mailto:sobraxus@gmail.com",
+    "email": "mailto:johndoe@gmail.com",
     "jobTitle": "SOC Analyst",
-    "alumniOf": "University of Portsmouth",
-    "sameAs": ["https://github.com/sobraxus"]
+    "alumniOf": "University of Genericness",
+    "sameAs": ["https://github.com/johndoe"]
   }
-  </script>
-  <script>
-    (function () {
-      var query = new URLSearchParams(location.search).get("theme");
-      var theme = query === "dark" || query === "light" ? query : (localStorage.getItem("theme") || "light");
-      document.documentElement.classList.toggle("dark", theme === "dark");
-    })();
   </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div id="scroll-progress" aria-hidden="true"></div>
 
-  <header class="nav">
-    <a class="nav-brand" href="/">adam</a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#about">about</a>
-      <a href="#experience">experience</a>
-      <a href="#expertise">expertise</a>
-      <a href="#work">work</a>
-      <a href="#connect">connect</a>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Generic Person home">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+        <path d="M6 8.2v14.8c0 .4.1.7.4 1l5.3 6.5c.6.7 1.3 1.3 2.1 1.8l7.5 4.3c.5.3 1.1.3 1.6 0l7.8-4.6c.4-.2.8-.5 1.1-.9l5.7-7c.3-.3.4-.6.4-1V8.2c0-.8-.6-1.4-1.3-1.6l-6.6-1.4c-.4-.1-.7-.2-1.1-.3L18.2 2.2c-.4-.1-.8-.1-1.1 0L10.2 4.8c-.3.1-.7.2-1 .3L6.6 6.6C5.9 6.8 5.3 7.4 5.3 8.2H6z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <text x="18" y="23" text-anchor="middle" font-size="11" font-weight="800" fill="currentColor" font-family="Poppins, sans-serif">AC</text>
+      </svg>
+      <span>Generic Person</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#focus">Focus</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M5 17h8M5 12h14M9 7h8"></path>
+      </svg>
+    </button>
   </header>
-
-  <nav class="tabbar" aria-label="Mobile">
-    <div class="tabbar-inner">
-      <a href="#about">about</a>
-      <a href="#experience">path</a>
-      <a href="#work">work</a>
-      <a href="#connect">hello</a>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-    </div>
+  <div class="header-spacer" aria-hidden="true"></div>
+  <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#focus">Focus</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <main id="main">
-    <section class="hero" aria-label="Introduction">
-      <div class="wrap hero-grid">
+    <section id="home" class="band band-alt">
+      <div class="wrap hero">
+        <div class="hero-copy">
+          <h1>SOC Analyst</h1>
+          <p>Hi, my name is Generic Person. I work on threat detection, and on getting an alert to a decision before the queue eats the day. Remote, UK.</p>
+          <div class="hero-links">
+            <a href="https://github.com/johndoe" rel="me noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2"/></svg>
+            </a>
+            <a href="mailto:johndoe@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 18h-2V9.25L12 13 6 9.25V18H4V6h1.2L12 10.25 18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="selfie" role="img" aria-label="Portrait of Generic Person"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="band">
+      <div class="wrap about">
+        <div class="about-photo">
+          <img src="/assets/portrait.jpg" width="450" height="450" alt="Generic Person" />
+        </div>
+        <div class="about-copy">
+          <h2>About</h2>
+          <h3>A SOC analyst with a degree in cyber security and a home lab that never quite stays finished</h3>
+          <p>I am Generic, based in the UK and working remotely. I trained at the University of Genericness on the BSc Cyber Security and Forensic Computing course. The work I care about sits between a noisy alert and a decision someone can stand behind.</p>
+          <p>I keep myself current with labs, TryHackMe, and a personal home-lab repo for Python, PowerShell, incident-response notes, and anything else I pick up while practising. I want to help make the environment around a queue a little more secure, even when that work is quiet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="band band-alt">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>Portfolio</h2>
+          <h3>Work I keep coming back to</h3>
+        </div>
+        <div class="card-grid">
+          <article class="media-card">
+            <button class="media-face" type="button" aria-expanded="false">
+              <div class="media-art art-detect" aria-hidden="true"></div>
+              <h3>Threat Detection</h3>
+            </button>
+            <div class="media-body">
+              <h3>Threat Detection</h3>
+              <p>Finding the signal in a noisy queue. I look at what actually fired, what the logs say, and whether it is worth a person's time.</p>
+            </div>
+          </article>
+          <article class="media-card">
+            <button class="media-face" type="button" aria-expanded="false">
+              <div class="media-art art-triage" aria-hidden="true"></div>
+              <h3>Alert Triage</h3>
+            </button>
+            <div class="media-body">
+              <h3>Alert Triage</h3>
+              <p>Deciding what to open, what to enrich, and what to close. Most of the day is this step. I want it faster and more honest.</p>
+            </div>
+          </article>
+          <article class="media-card">
+            <button class="media-face" type="button" aria-expanded="false">
+              <div class="media-art art-lab" aria-hidden="true"></div>
+              <h3>Home Lab</h3>
+            </button>
+            <div class="media-body">
+              <h3>Home Lab</h3>
+              <p>A personal repo for reusable notes and scripts: Python, PowerShell, C, regex, incident-response write-ups, and TryHackMe labs.</p>
+            </div>
+          </article>
+          <article class="media-card">
+            <button class="media-face" type="button" aria-expanded="false">
+              <div class="media-art art-ir" aria-hidden="true"></div>
+              <h3>Incident Notes</h3>
+            </button>
+            <div class="media-body">
+              <h3>Incident Notes</h3>
+              <p>Practice for the response step after an alert is worth opening. Notes, timelines, and the habit of writing down what actually happened.</p>
+            </div>
+          </article>
+          <article class="media-card">
+            <button class="media-face" type="button" aria-expanded="false">
+              <div class="media-art art-logs" aria-hidden="true"></div>
+              <h3>Log Analysis</h3>
+            </button>
+            <div class="media-body">
+              <h3>Log Analysis</h3>
+              <p>Reading what the systems said, not what the ticket title guessed. Linux, query work, and enough scripting to repeat a check tomorrow.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="band">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>Focus</h2>
+          <h3>Where I spend the hours</h3>
+        </div>
+        <div class="card-grid">
+          <article class="plain-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8m.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7z"/></svg>
+            <h3>Threat Detection</h3>
+            <p>Watching for the events that should interrupt someone, and ignoring the ones that should not.</p>
+          </article>
+          <article class="plain-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-7 14H7v-2h5zm5-4H7v-2h10zm0-4H7V7h10z"/></svg>
+            <h3>Triage and Response</h3>
+            <p>Taking an alert from first look, through context, to a close or a hand-off that another person can trust.</p>
+          </article>
+          <article class="plain-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3z"/></svg>
+            <h3>Security Automation</h3>
+            <p>Scripts and small tools so the analyst is not the integration layer between every system in the path.</p>
+          </article>
+          <article class="plain-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm4 18H6V4h7v5h5z"/></svg>
+            <h3>Investigation Notes</h3>
+            <p>Writing the path down. Degree work in forensic computing, and a habit of keeping lab notes reusable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="band band-alt">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2>Skills</h2>
+          <h3>What I reach for in a queue</h3>
+        </div>
+        <div class="skill-grid">
+          <div class="skill">
+            <div class="skill-row"><span>Threat Detection</span><b>Daily</b></div>
+            <div class="bar"><i style="--n:88"></i></div>
+            <div class="tags"><span>Practice</span><span>SOC work</span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-row"><span>Alert Triage</span><b>Daily</b></div>
+            <div class="bar"><i style="--n:86"></i></div>
+            <div class="tags"><span>Practice</span><span>SOC work</span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-row"><span>Log Analysis</span><b>Daily</b></div>
+            <div class="bar"><i style="--n:80"></i></div>
+            <div class="tags"><span>Practice</span><span>Linux</span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-row"><span>Python</span><b>Working</b></div>
+            <div class="bar"><i style="--n:70"></i></div>
+            <div class="tags"><span>Home lab</span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-row"><span>Linux</span><b>Working</b></div>
+            <div class="bar"><i style="--n:68"></i></div>
+            <div class="tags"><span>Home lab</span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-row"><span>PowerShell</span><b>Working</b></div>
+            <div class="bar"><i style="--n:62"></i></div>
+            <div class="tags"><span>Home lab</span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-row"><span>Git</span><b>Working</b></div>
+            <div class="bar"><i style="--n:72"></i></div>
+            <div class="tags"><span>Daily tools</span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-row"><span>Incident Notes</span><b>Working</b></div>
+            <div class="bar"><i style="--n:64"></i></div>
+            <div class="tags"><span>Labs</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="band">
+      <div class="wrap experience">
         <div>
-          <p class="hello rise" style="animation-delay:.05s">
-            <span>hello, i'm</span>
-            <svg class="draw-arrow" viewBox="0 0 36 24" aria-hidden="true"><path d="M4 6 C 14 6, 24 10, 28 20 M28 20 l -7 -2 M28 20 l -2 -7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" pathLength="1"></path></svg>
-          </p>
-          <h1 class="hero-name" aria-label="Adam Cooper">
-            <span class="word" aria-hidden="true"><span class="letter rise" style="animation-delay:.1s">a</span><span class="letter rise" style="animation-delay:.14s">d</span><span class="letter rise" style="animation-delay:.18s">a</span><span class="letter rise" style="animation-delay:.22s">m</span></span>
-            <span class="word" aria-hidden="true"><span class="letter rise" style="animation-delay:.3s">c</span><span class="letter rise" style="animation-delay:.34s">o</span><span class="letter rise" style="animation-delay:.38s">o</span><span class="letter rise" style="animation-delay:.42s">p</span><span class="letter rise" style="animation-delay:.46s">e</span><span class="letter rise" style="animation-delay:.5s">r</span></span>
-          </h1>
-          <p class="role-note rise" style="animation-delay:.7s" aria-hidden="true">
-            <svg class="draw-arrow" viewBox="0 0 36 28"><path d="M4 6 C 14 8, 22 10, 30 22 M30 22 l -8 -1 M30 22 l -2 -8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" pathLength="1"></path></svg>
-            <span>soc analyst</span>
-          </p>
-          <p class="hero-subtitle rise" style="animation-delay:.45s">
-            I work on threat detection, and on the automation that gets an alert to a decision before the queue eats the day.
-          </p>
-          <p class="hero-meta rise" style="animation-delay:.55s">
-            remote · uk · <span id="local-clock" data-timezone="Europe/London" data-suffix="uk">--:-- uk</span>
-          </p>
-          <div class="hero-actions rise" style="animation-delay:.65s">
-            <span data-magnetic><a class="btn" href="mailto:sobraxus@gmail.com">say hello</a></span>
-            <a class="mail-link" href="mailto:sobraxus@gmail.com">sobraxus@gmail.com</a>
-            <span class="reply-note">i do read these</span>
+          <div class="section-intro">
+            <h2>Experience</h2>
+            <h3>Work</h3>
           </div>
-          <div class="stack rise" style="animation-delay:.8s" aria-label="Tools I use">
-            <span class="stack-label">stack</span>
-            <span title="Python">Py</span>
-            <span title="TypeScript">TS</span>
-            <span title="SQL">SQL</span>
-            <span title="Linux">Lx</span>
-            <span title="Git">Git</span>
-            <span title="Flower federated learning">FL</span>
-          </div>
-        </div>
-        <div class="portrait-wrap rise" style="animation-delay:.35s">
-          <span class="doodle doodle-a" aria-hidden="true">✦</span>
-          <span class="doodle doodle-b" aria-hidden="true"></span>
-          <span class="doodle doodle-c" aria-hidden="true">+</span>
-          <div class="portrait-note" aria-hidden="true">
-            <span>the avatar</span>
-            <svg class="draw-arrow" viewBox="0 0 36 36"><path d="M30 6 C 24 10, 20 16, 16 28 M16 28 l 7 -3 M16 28 l 2 -8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" pathLength="1"></path></svg>
-          </div>
-          <img class="portrait" src="https://avatars.githubusercontent.com/u/75052585?v=4" width="360" height="360" alt="Illustrated astronaut avatar used by Adam Cooper on GitHub" />
-        </div>
-      </div>
-    </section>
-
-    <div class="connector" aria-hidden="true">
-      <svg viewBox="0 0 24 48" fill="none"><path d="M12 2 Q 7 14, 12 24 Q 17 34, 12 46" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 4"/></svg>
-    </div>
-
-    <section class="wrap" aria-label="At a glance">
-      <div class="stats reveal">
-        <div class="stat"><b>SOC</b><span>threat detection and response</span></div>
-        <div class="stat"><b>BSc</b><span>cyber security &amp; forensic computing</span></div>
-        <div class="stat"><b>2024</b><span>final-year project submitted</span></div>
-        <div class="stat"><b>now</b><span>SOAR, still in progress</span></div>
-      </div>
-    </section>
-
-    <section class="band" id="about">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="kicker">about</p>
-            <h2 class="section-title">the short version</h2>
-          </div>
-          <p class="note">worth the scroll</p>
-        </div>
-        <div class="bento">
-          <article class="card span-4 reveal">
-            <div class="label">current focus</div>
-            <h3>SOC analyst</h3>
-            <p>Threat detection, triage, and the response step after an alert is actually worth opening. The live project is a SOAR workflow. TriageRPG is the analyst-side prototype sitting next to it.</p>
-            <p class="aside">the queue is the product problem</p>
+          <article class="plain-card">
+            <span class="year">Now</span>
+            <h3>SOC Analyst</h3>
+            <p class="place">Remote, UK</p>
+            <p>Threat detection, alert triage, and the response step after a case is worth opening. Laptop first.</p>
+            <ul>
+              <li>Read the alert, then the logs, then decide.</li>
+              <li>Keep notes that another person can pick up.</li>
+              <li>Automate the boring joins between tools where it is safe.</li>
+            </ul>
           </article>
-          <article class="card span-2 reveal">
-            <div class="label">based</div>
-            <h3>Remote, UK</h3>
-            <p>Laptop first. Trained at the University of Portsmouth.</p>
-            <p class="aside">clock up top is UK time</p>
+        </div>
+        <div>
+          <div class="section-intro">
+            <h2>Experience</h2>
+            <h3>Education</h3>
+          </div>
+          <article class="plain-card">
+            <span class="year">2024</span>
+            <h3>BSc Cyber Security and Forensic Computing</h3>
+            <p class="place">University of Genericness</p>
+            <p>Final-year work looked at false positives in a SOC queue. The degree covered forensic computing, detection, and the habit of writing findings down.</p>
           </article>
-          <article class="card span-2 reveal">
-            <div class="label">education</div>
-            <h3>BSc, Portsmouth</h3>
-            <p>Cyber Security and Forensic Computing. The final-year project applied federated learning to false positives in a SOC queue.</p>
-          </article>
-          <article class="card span-4 reveal">
-            <div class="label">what I keep coming back to</div>
-            <h3>Fewer false positives. A faster decision.</h3>
-            <p>A lot of SOC time goes into alerts that were never an incident. I care about the stretch between detection and a decision someone can stand behind — enrich it, show the path, then respond.</p>
-            <p class="aside">that stretch is the SOAR project</p>
+        </div>
+        <div>
+          <div class="section-intro">
+            <h2>Experience</h2>
+            <h3>Labs</h3>
+          </div>
+          <article class="plain-card">
+            <span class="year">Ongoing</span>
+            <h3>Home lab</h3>
+            <p class="place"><a href="https://github.com/johndoe/HomeLab" rel="noopener">github.com/johndoe/HomeLab</a></p>
+            <p>A personal repo for progress: languages, everyday notes, and things tried in a home environment. Scripts are written so a username can be swapped out and reused.</p>
+            <ul>
+              <li>Python and PowerShell</li>
+              <li>Incident-response notes</li>
+              <li>TryHackMe labs</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="band" id="experience">
+    <section id="contact" class="band band-alt">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="kicker">experience</p>
-            <h2 class="section-title">the path so far</h2>
-          </div>
-          <p class="note">open a row</p>
+        <div class="section-intro">
+          <h2>Contact</h2>
+          <h3>A short note is enough</h3>
         </div>
-        <div class="exp-list">
-          <details class="exp-item" open>
-            <summary>
-              <span class="mark" aria-hidden="true">01</span>
-              <span><strong>SOAR</strong><em>personal project · detection to response</em></span>
-              <span class="when">now</span>
-            </summary>
-            <div class="exp-body">
-              <p>A security orchestration, automation, and response workflow. The public write-up stays high level until each piece is ready to show.</p>
-              <ul>
-                <li>Shape the path from alert, to context, to a decision, to an action.</li>
-                <li>Keep the analyst from being the integration layer.</li>
-              </ul>
-            </div>
-          </details>
-          <details class="exp-item">
-            <summary>
-              <span class="mark" aria-hidden="true">02</span>
-              <span><strong>TriageRPG</strong><em>personal project · analyst dashboard</em></span>
-              <span class="when">homelab</span>
-            </summary>
-            <div class="exp-body">
-              <p>A gamified SOC dashboard. Cases come in, triage earns progress, and Gemini drafts a summary so the first read is not a blank ticket.</p>
-              <ul>
-                <li>Next.js, Prisma, PostgreSQL, GitHub sign-in.</li>
-                <li>Lives in the HomeLab repo under triagerpg.</li>
-              </ul>
-            </div>
-          </details>
-          <details class="exp-item">
-            <summary>
-              <span class="mark" aria-hidden="true">03</span>
-              <span><strong>University of Portsmouth</strong><em>BSc Cyber Security and Forensic Computing</em></span>
-              <span class="when">2024</span>
-            </summary>
-            <div class="exp-body">
-              <p>Final-year project: an artificially intelligent SIEM for targeted threat detection, using federated logistic regression to cut false positives.</p>
-              <ul>
-                <li>Flower, scikit-learn, and the UNSW-NB15 dataset.</li>
-                <li>The model was moderate. Overfitting showed up as high loss, which is written up honestly.</li>
-              </ul>
-            </div>
-          </details>
-          <details class="exp-item">
-            <summary>
-              <span class="mark" aria-hidden="true">04</span>
-              <span><strong>Home lab</strong><em>notes, labs, and half-finished tools</em></span>
-              <span class="when">ongoing</span>
-            </summary>
-            <div class="exp-body">
-              <p>Python, PowerShell, incident-response notes, and TryHackMe write-ups. A place to try an idea before it deserves a project page.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="band" id="expertise">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="kicker">expertise</p>
-            <h2 class="section-title">what I reach for</h2>
-          </div>
-          <p class="note">still adding to it</p>
-        </div>
-        <div class="groups reveal">
-          <div>
-            <h3>Detection</h3>
-            <ul class="chips">
-              <li>Alert triage</li>
-              <li>False positives</li>
-              <li>Log analysis</li>
-              <li>SIEM</li>
-              <li>Threat detection</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Response</h3>
-            <ul class="chips">
-              <li>Incident notes</li>
-              <li>Case handling</li>
-              <li>Automation</li>
-              <li>Playbooks</li>
-              <li>Analyst workflow</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Tools</h3>
-            <ul class="chips">
-              <li>Python</li>
-              <li>TypeScript</li>
-              <li>Next.js</li>
-              <li>Prisma</li>
-              <li>PostgreSQL</li>
-              <li>scikit-learn</li>
-              <li>Flower</li>
-              <li>Git</li>
-              <li>Linux</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Ground</h3>
-            <ul class="chips">
-              <li>SOC operations</li>
-              <li>Forensic computing</li>
-              <li>Federated learning</li>
-              <li>Security automation</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="band" id="work">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="kicker">work</p>
-            <h2 class="section-title">selected projects</h2>
-          </div>
-          <p class="note">three, on purpose</p>
-        </div>
-        <div class="project-grid">
-          <a class="project-card feature reveal" href="/projects/soar.html">
-            <b class="kicker">in progress</b>
-            <strong>SOAR</strong>
-            <span>Orchestration from detection through triage to response. The public page is the part I am happy to show.</span>
-            <span class="go">read the write-up →</span>
+        <div class="contact-row">
+          <a class="contact-pill" href="https://github.com/johndoe" rel="me noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2"/></svg>
+            </span>
+            <span>GitHub</span>
           </a>
-          <a class="project-card reveal" href="/projects/triagerpg.html">
-            <b class="kicker">prototype</b>
-            <strong>TriageRPG</strong>
-            <span>A SOC queue turned into a dashboard, with XP for cases you actually close.</span>
-            <span class="go">open →</span>
+          <a class="contact-pill" href="mailto:johndoe@gmail.com">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 18h-2V9.25L12 13 6 9.25V18H4V6h1.2L12 10.25 18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+            </span>
+            <span>Mail</span>
           </a>
-          <a class="project-card reveal" href="/projects/ai-siem.html">
-            <b class="kicker">2024 · research</b>
-            <strong>AI SIEM</strong>
-            <span>Federated learning aimed at false positives. Final-year project at Portsmouth.</span>
-            <span class="go">open →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="quote">
-      <div class="wrap reveal">
-        <figure>
-          <blockquote>an alert is not a decision.</blockquote>
-          <figcaption>— adam</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="band" id="connect">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <p class="kicker">connect</p>
-            <h2 class="section-title">say hello</h2>
-          </div>
-          <p class="note">short notes are fine</p>
-        </div>
-        <div class="contact-list reveal">
-          <a href="mailto:sobraxus@gmail.com"><span><small>email</small>sobraxus@gmail.com</span><em>↗</em></a>
-          <a href="https://github.com/sobraxus" rel="me noopener"><span><small>github</small>sobraxus</span><em>↗</em></a>
-          <a href="https://cwpa.dev"><span><small>site</small>cwpa.dev</span><em>↗</em></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>© <span id="year">2026</span> Adam Cooper</span>
-      <span><a href="https://github.com/sobraxus" rel="me noopener">github</a><a href="mailto:sobraxus@gmail.com">email</a><a href="/projects/">work</a></span>
+  <section class="site-end">
+    <div class="wrap end-grid">
+      <div>
+        <div class="brand brand-on-dark">
+          <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M6 8.2v14.8c0 .4.1.7.4 1l5.3 6.5c.6.7 1.3 1.3 2.1 1.8l7.5 4.3c.5.3 1.1.3 1.6 0l7.8-4.6c.4-.2.8-.5 1.1-.9l5.7-7c.3-.3.4-.6.4-1V8.2c0-.8-.6-1.4-1.3-1.6l-6.6-1.4c-.4-.1-.7-.2-1.1-.3L18.2 2.2c-.4-.1-.8-.1-1.1 0L10.2 4.8c-.3.1-.7.2-1 .3L6.6 6.6C5.9 6.8 5.3 7.4 5.3 8.2H6z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+            <text x="18" y="23" text-anchor="middle" font-size="11" font-weight="800" fill="currentColor" font-family="Poppins, sans-serif">AC</text>
+          </svg>
+          <span>Generic Person</span>
+        </div>
+        <div class="end-social">
+          <a href="https://github.com/johndoe" rel="me noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2"/></svg>
+          </a>
+          <a href="mailto:johndoe@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 18h-2V9.25L12 13 6 9.25V18H4V6h1.2L12 10.25 18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="end-cols">
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="https://github.com/johndoe/HomeLab" rel="noopener">Home lab</a></li>
+            <li><a href="https://github.com/johndoe" rel="me noopener">GitHub</a></li>
+            <li><a href="mailto:johndoe@gmail.com">Email</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
+  <footer class="legal">
+    <small>© Copyright <span id="year">2026</span> Generic Person. All rights reserved.</small>
   </footer>
   <script src="/js/site.js"></script>
 </body>

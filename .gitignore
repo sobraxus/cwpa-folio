@@ -1,3 +1,6 @@
 .DS_Store
 agent-tools/
 *.log
+node_modules/
+.wrangler/
+references/

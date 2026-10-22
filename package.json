@@ -1,10 +1,10 @@
 {
   "name": "cwpa-portfolio",
   "private": true,
-  "description": "Static portfolio for cwpa.dev. No build step — Cloudflare Pages serves this folder as-is.",
+  "description": "Static portfolio for cwpa.dev. No build step — Cloudflare Workers serves this folder as-is.",
   "scripts": {
-    "dev": "python3 -m http.server 44721 --bind 0.0.0.0",
-    "start": "python3 -m http.server 44721 --bind 0.0.0.0",
+    "dev": "python -m http.server 44721 --bind 0.0.0.0",
+    "start": "python -m http.server 44721 --bind 0.0.0.0",
     "deploy": "wrangler deploy",
     "preview": "wrangler preview"
   },

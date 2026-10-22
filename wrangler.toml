@@ -8,6 +8,12 @@ directory = "."
 not_found_handling = "404-page"
 html_handling = "auto-trailing-slash"
 
+[observability]
+enabled = true
+
+[observability.traces]
+enabled = true
+
 # Zone routes, not custom domains. Workers Builds can edit routes and cannot
 # edit DNS, so custom_domain = true fails the deploy. These patterns send
 # every path on the hostname to this Worker, including CSS and JavaScript.

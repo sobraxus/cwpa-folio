@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://cwpa.dev/</loc></url>
-  <url><loc>https://cwpa.dev/projects/</loc></url>
-  <url><loc>https://cwpa.dev/projects/soar.html</loc></url>
-  <url><loc>https://cwpa.dev/projects/triagerpg.html</loc></url>
-  <url><loc>https://cwpa.dev/projects/ai-siem.html</loc></url>
 </urlset>
