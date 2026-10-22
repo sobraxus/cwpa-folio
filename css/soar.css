@@ -1,0 +1,33 @@
+/* soar.css — local colour and the four-step flow on the SOAR page. */
+
+body.page-soar {
+  --accent: #0e6b66;
+  --accent-soft: rgba(14, 107, 102, 0.1);
+}
+
+.page-soar .case-hero {
+  background:
+    linear-gradient(180deg, transparent, transparent),
+    radial-gradient(500px 180px at 80% 0%, var(--accent-soft), transparent 70%);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px 28px 8px;
+}
+
+.flow {
+  margin-top: 8px;
+}
+
+.margin-note {
+  margin-top: 28px;
+  padding: 14px 16px;
+  border-left: 2px solid var(--accent);
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  color: var(--accent);
+  line-height: 1.15;
+}
+
+@media (max-width: 800px) {
+  .page-soar .case-hero { padding: 18px 16px 4px; }
+}

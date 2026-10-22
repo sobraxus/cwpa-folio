@@ -1,0 +1,45 @@
+/* triagerpg.css — local HUD treatment for the TriageRPG write-up. */
+
+body.page-triage {
+  --accent: #9a4e12;
+  --accent-soft: rgba(154, 78, 18, 0.1);
+}
+
+html.dark body.page-triage {
+  --accent: #f0b429;
+  --accent-soft: rgba(240, 180, 41, 0.1);
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.hud article {
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  background: var(--chip);
+}
+
+.hud b {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hud strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 800px) {
+  .hud { grid-template-columns: 1fr; }
+}
