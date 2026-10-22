@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TriageRPG | Adam Cooper</title>
+  <meta name="description" content="TriageRPG is a gamified SOC analyst dashboard. Next.js, Prisma, PostgreSQL, and Gemini triage summaries." />
+  <link rel="canonical" href="https://cwpa.dev/projects/triagerpg.html" />
+  <meta name="theme-color" content="#f6f3ec" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/triagerpg.css" />
+  <script>
+    (function () {
+      var query = new URLSearchParams(location.search).get("theme");
+      var theme = query === "dark" || query === "light" ? query : (localStorage.getItem("theme") || "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    })();
+  </script>
+</head>
+<body class="page-triage">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="nav-brand" href="/">adam</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#about">about</a>
+      <a href="/#experience">experience</a>
+      <a href="/#expertise">expertise</a>
+      <a href="/projects/" aria-current="page">work</a>
+      <a href="/#connect">connect</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </nav>
+  </header>
+  <nav class="tabbar" aria-label="Mobile">
+    <div class="tabbar-inner">
+      <a href="/#about">about</a>
+      <a href="/#experience">path</a>
+      <a href="/projects/" aria-current="page">work</a>
+      <a href="/#connect">hello</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main" class="wrap case">
+    <a class="back" href="/projects/">← all work</a>
+    <header class="case-hero">
+      <p class="status"><i></i> prototype</p>
+      <h1>TriageRPG</h1>
+      <p class="lede">A SOC analyst dashboard that treats the backlog like a campaign. Closing a case is the progress. The first screen you get is a summary, not an empty ticket.</p>
+    </header>
+
+    <section class="hud" aria-label="What the dashboard tracks">
+      <article><b>progress</b><strong>XP per case</strong></article>
+      <article><b>habit</b><strong>streaks</strong></article>
+      <article><b>first read</b><strong>AI summary</strong></article>
+    </section>
+
+    <div class="case-grid">
+      <div>
+        <section class="block">
+          <h2>What it does</h2>
+          <p>Cases are meant to arrive from the tools that already raise them, such as a webhook from Splunk or Jira. Sign in with GitHub, open a case, and Gemini writes a triage summary. A seed script can drop a dummy case in so the screen can be tested before anything real is connected.</p>
+        </section>
+        <section class="block">
+          <h2>Why it exists</h2>
+          <p>The SOAR work is about what happens around a case. TriageRPG is the case itself: the thing an analyst looks at, finishes, and gets credit for finishing. One is orchestration. This one is the desk.</p>
+        </section>
+      </div>
+      <aside class="panel">
+        <h2>Stack</h2>
+        <ul class="meta-list">
+          <li><span>app</span> Next.js 15</li>
+          <li><span>data</span> Prisma + Postgres</li>
+          <li><span>sign-in</span> GitHub</li>
+          <li><span>summary</span> Gemini</li>
+        </ul>
+        <ul class="chips">
+          <li>TypeScript</li>
+          <li>Tailwind</li>
+          <li>NextAuth</li>
+        </ul>
+        <p class="more"><a href="https://github.com/sobraxus/HomeLab/tree/master/triagerpg" rel="noopener">source in HomeLab ↗</a></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Adam Cooper</span>
+      <span><a href="/projects/soar.html">soar</a><a href="/">home</a></span>
+    </div>
+  </footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI SIEM | Adam Cooper</title>
+  <meta name="description" content="Final-year project at the University of Portsmouth: federated learning for false-positive reduction in a SOC." />
+  <link rel="canonical" href="https://cwpa.dev/projects/ai-siem.html" />
+  <meta name="theme-color" content="#f6f3ec" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/ai-siem.css" />
+  <script>
+    (function () {
+      var query = new URLSearchParams(location.search).get("theme");
+      var theme = query === "dark" || query === "light" ? query : (localStorage.getItem("theme") || "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    })();
+  </script>
+</head>
+<body class="page-siem">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="nav-brand" href="/">adam</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#about">about</a>
+      <a href="/#experience">experience</a>
+      <a href="/#expertise">expertise</a>
+      <a href="/projects/" aria-current="page">work</a>
+      <a href="/#connect">connect</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </nav>
+  </header>
+  <nav class="tabbar" aria-label="Mobile">
+    <div class="tabbar-inner">
+      <a href="/#about">about</a>
+      <a href="/#experience">path</a>
+      <a href="/projects/" aria-current="page">work</a>
+      <a href="/#connect">hello</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main" class="wrap case">
+    <a class="back" href="/projects/">← all work</a>
+    <header class="case-hero">
+      <p class="status"><i></i> dissertation · 2024</p>
+      <h1>AI SIEM</h1>
+      <p class="lede">Artificially intelligent SIEM for targeted threat detection and analysis. A final-year project at the University of Portsmouth, on the BSc Cyber Security and Forensic Computing course.</p>
+    </header>
+
+    <section class="loop" aria-label="How the experiment was framed">
+      <article>
+        <b>sites</b>
+        <p>Train locally. The raw alerts do not have to move to one place.</p>
+      </article>
+      <div class="join" aria-hidden="true">→</div>
+      <article>
+        <b>FedAvg</b>
+        <p>Logistic regression, averaged with Flower, on UNSW-NB15.</p>
+      </article>
+      <div class="join" aria-hidden="true">→</div>
+      <article>
+        <b>queue</b>
+        <p>The aim was fewer false positives for the person triaging.</p>
+      </article>
+    </section>
+
+    <div class="case-grid">
+      <div>
+        <section class="block">
+          <h2>The question</h2>
+          <p>False positives are where a SOC spends time it does not have. The project asked whether federated learning — logistic regression and FedAvg, with scikit-learn and Flower — could take a bite out of that, using the UNSW-NB15 dataset from the University of New South Wales.</p>
+        </section>
+        <section class="block">
+          <h2>What actually happened</h2>
+          <p>Software, hardware, and time pushed the plan off its first line. The logistic regression model performed moderately. A high loss, likely because the model had been overfit, held the result back. The write-up treats that as the finding: federated learning belongs in this problem, and it needs a stronger model, something like a quantile regression forest or a neural net, plus TensorFlow and a GPU, before anyone should trust it in a queue.</p>
+        </section>
+      </div>
+      <aside class="panel">
+        <h2>Record</h2>
+        <ul class="meta-list">
+          <li><span>where</span> Portsmouth</li>
+          <li><span>when</span> submitted 2024</li>
+          <li><span>data</span> UNSW-NB15</li>
+          <li><span>method</span> FedAvg</li>
+        </ul>
+        <ul class="chips">
+          <li>Python</li>
+          <li>scikit-learn</li>
+          <li>Flower</li>
+        </ul>
+        <p class="more"><a href="https://github.com/sobraxus/University" rel="noopener">project notes on GitHub ↗</a></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Adam Cooper</span>
+      <span><a href="/projects/soar.html">soar</a><a href="/">home</a></span>
+    </div>
+  </footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>
