@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not found | Adam Cooper</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#f6f3ec" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/404.css" />
+  <script>
+    (function () {
+      var query = new URLSearchParams(location.search).get("theme");
+      var theme = query === "dark" || query === "light" ? query : (localStorage.getItem("theme") || "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    })();
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <a class="nav-brand" href="/">adam</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#about">about</a>
+      <a href="/#expertise">expertise</a>
+      <a href="/projects/">work</a>
+      <a href="/#connect">connect</a>
+    </nav>
+  </header>
+  <main class="wrap missing">
+    <p class="hand">wrong turn</p>
+    <h1>404</h1>
+    <p>That page is not on the site. The work, and the way back, are.</p>
+    <p><a class="btn" href="/">back home</a></p>
+  </main>
+  <script src="/js/site.js"></script>
+</body>
+</html>
