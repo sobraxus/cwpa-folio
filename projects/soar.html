@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SOAR | Adam Cooper</title>
+  <meta name="description" content="A SOAR project by Adam Cooper: orchestration from threat detection through triage to response." />
+  <link rel="canonical" href="https://cwpa.dev/projects/soar.html" />
+  <meta name="theme-color" content="#f6f3ec" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/soar.css" />
+  <script>
+    (function () {
+      var query = new URLSearchParams(location.search).get("theme");
+      var theme = query === "dark" || query === "light" ? query : (localStorage.getItem("theme") || "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    })();
+  </script>
+</head>
+<!--
+  EDIT THIS PAGE
+  Replace the sentences in the panels below when you want the write-up
+  to name tools, scope, and results. Leave out anything that should stay
+  in the lab. Styles for this page only: css/soar.css
+-->
+<body class="page-soar">
+  <a class="skip" href="#main">Skip to content</a>
+  <div id="scroll-progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="nav-brand" href="/">adam</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#about">about</a>
+      <a href="/#experience">experience</a>
+      <a href="/#expertise">expertise</a>
+      <a href="/projects/" aria-current="page">work</a>
+      <a href="/#connect">connect</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </nav>
+  </header>
+  <nav class="tabbar" aria-label="Mobile">
+    <div class="tabbar-inner">
+      <a href="/#about">about</a>
+      <a href="/#experience">path</a>
+      <a href="/projects/" aria-current="page">work</a>
+      <a href="/#connect">hello</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main" class="wrap case">
+    <a class="back" href="/projects/">← all work</a>
+    <header class="case-hero">
+      <p class="status"><i></i> in progress</p>
+      <h1>SOAR</h1>
+      <p class="lede">Security orchestration, automation, and response. I am building the path from an alert that deserves attention, through context, to a decision and an action — without making the analyst the glue in the middle.</p>
+      <p class="margin-note">the specifics land here as each piece is ready to show.</p>
+    </header>
+
+    <section class="block flow">
+      <h2>The shape of it</h2>
+      <div class="steps">
+        <article class="step">
+          <b>01</b>
+          <strong>Detect</strong>
+          <p>Keep the alerts that are worth an analyst's time. Drop the ones that only make the queue longer.</p>
+        </article>
+        <article class="step">
+          <b>02</b>
+          <strong>Enrich</strong>
+          <p>Put context on the case before anyone opens it: what it is, where it sits, what has already been seen.</p>
+        </article>
+        <article class="step">
+          <b>03</b>
+          <strong>Decide</strong>
+          <p>A triage path a person can follow. The point of the summary is a decision, not another paragraph.</p>
+        </article>
+        <article class="step">
+          <b>04</b>
+          <strong>Respond</strong>
+          <p>The action, then a record of it. This is the step still being shaped.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="case-grid">
+      <div>
+        <section class="block">
+          <h2>What is public</h2>
+          <p>This page is the shareable version. Playbooks, detections, and lab notes stay off it until I decide a piece is safe and finished enough to show. Related work that is already public: TriageRPG, which prototypes the analyst side of triage, and the 2024 SIEM project on false positives.</p>
+        </section>
+        <section class="block">
+          <h2>Where it sits</h2>
+          <p>TriageRPG covers the case a person looks at. This project is the orchestration around that case: what fires, what gets attached, and what is allowed to happen next. They are meant to meet in the middle.</p>
+        </section>
+      </div>
+      <aside class="panel">
+        <h2>On the record</h2>
+        <ul class="meta-list">
+          <li><span>status</span> in progress</li>
+          <li><span>focus</span> triage &amp; response</li>
+          <li><span>audience</span> the analyst</li>
+          <li><span>repo</span> not public yet</li>
+        </ul>
+        <ul class="chips">
+          <li>detection</li>
+          <li>enrichment</li>
+          <li>triage</li>
+          <li>response</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Adam Cooper</span>
+      <span><a href="/projects/triagerpg.html">triagerpg</a><a href="/projects/ai-siem.html">ai siem</a><a href="/">home</a></span>
+    </div>
+  </footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>
