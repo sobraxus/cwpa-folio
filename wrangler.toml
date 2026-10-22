@@ -7,3 +7,14 @@ preview_urls = true
 directory = "."
 not_found_handling = "404-page"
 html_handling = "auto-trailing-slash"
+
+# Zone routes, not custom domains. Workers Builds can edit routes and cannot
+# edit DNS, so custom_domain = true fails the deploy. These patterns send
+# every path on the hostname to this Worker, including CSS and JavaScript.
+[[routes]]
+pattern = "cwpa.dev/*"
+zone_name = "cwpa.dev"
+
+[[routes]]
+pattern = "www.cwpa.dev/*"
+zone_name = "cwpa.dev"

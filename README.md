@@ -57,7 +57,7 @@ Paths start with `/`, so open it through this server. Opening the HTML file dire
 
 ## Cloudflare Workers & Pages
 
-The Workers & Pages list stays empty until a project is created there. Nothing about this site is registered in the Cloudflare account yet.
+The site is already connected through Workers Builds. The workers.dev hostname is [cwpa-folio.cwpa.workers.dev](https://cwpa-folio.cwpa.workers.dev). `cwpa.dev` stays unstyled until the routes in `wrangler.toml` are deployed: the homepage can be cached from the Worker while CSS, JavaScript, and other paths still fall through to an origin Cloudflare cannot reach (HTTP 522).
 
 Cloudflare's git list only includes GitHub and GitLab. The Cursor copy of this repository does not appear in that list. The same files are on GitHub at [sobraxus/cwpa-folio](https://github.com/sobraxus/cwpa-folio).
 
@@ -66,11 +66,24 @@ Cloudflare's git list only includes GitHub and GitLab. The Cursor copy of this r
 3. Choose **GitHub** and the **sobraxus** account.
 4. Select **cwpa-folio**. If it is missing, GitHub is only sharing some repositories with Cloudflare. Open [GitHub installations](https://github.com/settings/installations), choose **Cloudflare Workers & Pages**, and add `cwpa-folio` under repository access. Return to Cloudflare and refresh the list.
 5. Production branch: `main`.
-6. Framework preset: **None**.
-7. Build command: leave empty.
-8. Build output directory: `/`.
-9. After the first deploy, open **Custom domains** and add `cwpa.dev`.
+6. Framework preset: **None** (classic Pages), or connect as a **Worker** with Git builds.
 
-A later push to `main` on that GitHub repository publishes the site. No Wrangler config is required. `_headers` sets a few basic response headers.
+### If Cloudflare requires deploy and preview commands (Workers Builds)
+
+That flow uses Wrangler, not an empty build step alone. This repo includes `wrangler.toml` for a static assets-only Worker:
+
+| Setting | Value |
+| --- | --- |
+| Build command | leave empty, or `exit 0` |
+| **Deploy command** | `npx wrangler deploy` |
+| **Preview command** | `npx wrangler preview` (not `deploy`) |
+
+Set the Worker **name** in the dashboard to match `name` in `wrangler.toml` (`cwpa-folio`), or rename the field in `wrangler.toml` to match the Worker you created.
+
+`wrangler.toml` publishes routes for `cwpa.dev/*` and `www.cwpa.dev/*` on the next `npx wrangler deploy`. That is what makes stylesheets and scripts load on the custom domain.
+
+If that deploy fails while adding the routes, add them in the dashboard instead: Worker **cwpa-folio** → **Settings** → **Domains & Routes** → **Add** → **Custom domain** `cwpa.dev`, then the same for `www.cwpa.dev`.
+
+A later push to `main` on that GitHub repository publishes the site. `_headers` sets a few basic response headers.
 
 If `cwpa.dev` email is not routed yet, the contact address on the site is `sobraxus@gmail.com`. Swap it in `index.html` when you want a `cwpa.dev` mailbox instead.
