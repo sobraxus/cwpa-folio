@@ -630,8 +630,74 @@ section[id] {
   gap: 4rem;
 }
 
+.experience > div {
+  display: grid;
+  gap: 1rem;
+}
+
 .experience .plain-card {
   width: 100%;
+}
+
+.exp-toggle {
+  display: block;
+  width: 100%;
+  padding-right: 1.6rem;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+
+.exp-toggle::after {
+  content: "+";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.exp-card.open .exp-toggle::after {
+  content: "–";
+}
+
+.exp-title {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.exp-card .exp-toggle .place {
+  display: block;
+  margin-bottom: 0;
+}
+
+.exp-more {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--ease);
+}
+
+.exp-more > div {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.exp-card.open .exp-more {
+  grid-template-rows: 1fr;
+}
+
+.exp-more p {
+  margin-top: 0.75rem;
+}
+
+.exp-more .place {
+  margin-top: 0.85rem;
+  margin-bottom: 0;
 }
 
 /* Contact */
@@ -799,7 +865,8 @@ section[id] {
   .selfie,
   .bar i,
   .media-body,
-  .media-art {
+  .media-art,
+  .exp-more {
     animation: none;
     transition: none;
   }

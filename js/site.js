@@ -20,6 +20,24 @@
     });
   }
 
+  var experiences = document.querySelectorAll(".exp-card");
+  experiences.forEach(function (card) {
+    var button = card.querySelector(".exp-toggle");
+    if (!button) return;
+    button.addEventListener("click", function () {
+      var willOpen = !card.classList.contains("open");
+      experiences.forEach(function (other) {
+        var otherButton = other.querySelector(".exp-toggle");
+        other.classList.remove("open");
+        if (otherButton) otherButton.setAttribute("aria-expanded", "false");
+      });
+      if (willOpen) {
+        card.classList.add("open");
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
   var cards = document.querySelectorAll(".media-card");
   cards.forEach(function (card) {
     var button = card.querySelector(".media-face");
