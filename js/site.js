@@ -20,13 +20,58 @@
     });
   }
 
-  document.querySelectorAll(".media-card").forEach(function (card) {
+  var cards = document.querySelectorAll(".media-card");
+  cards.forEach(function (card) {
     var button = card.querySelector(".media-face");
     if (!button) return;
     button.addEventListener("click", function () {
-      var open = card.classList.toggle("open");
-      button.setAttribute("aria-expanded", open ? "true" : "false");
+      var willOpen = !card.classList.contains("open");
+      cards.forEach(function (other) {
+        var otherButton = other.querySelector(".media-face");
+        other.classList.remove("open");
+        if (otherButton) otherButton.setAttribute("aria-expanded", "false");
+      });
+      if (willOpen) {
+        card.classList.add("open");
+        button.setAttribute("aria-expanded", "true");
+      }
     });
+  });
+
+  document.querySelectorAll(".cipher").forEach(function (heading) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var text = heading.textContent;
+    var glyphs = "%^#@$&*+=~<>?/\\|{}[]";
+    var letters = [];
+    heading.textContent = "";
+    for (var i = 0; i < text.length; i++) {
+      var span = document.createElement("span");
+      var character = text.charAt(i);
+      span.textContent = character;
+      span.setAttribute("aria-hidden", "true");
+      heading.appendChild(span);
+      if (character !== " ") letters.push({ span: span, character: character, busy: false });
+    }
+
+    function flicker() {
+      if (document.hidden) return;
+      var pool = letters.filter(function (item) { return !item.busy; });
+      if (!pool.length) return;
+      var count = Math.min(pool.length, 1 + Math.floor(Math.random() * 2));
+      for (var n = 0; n < count; n++) {
+        var pick = pool.splice(Math.floor(Math.random() * pool.length), 1)[0];
+        pick.busy = true;
+        pick.span.textContent = glyphs.charAt(Math.floor(Math.random() * glyphs.length));
+        pick.span.classList.add("on");
+        window.setTimeout(function (item) {
+          item.span.textContent = item.character;
+          item.span.classList.remove("on");
+          item.busy = false;
+        }, 320 + Math.floor(Math.random() * 480), pick);
+      }
+    }
+
+    window.setInterval(flicker, 900);
   });
 
   var year = document.getElementById("year");

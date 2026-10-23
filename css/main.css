@@ -133,26 +133,33 @@ button {
 /* Header */
 
 .site-header {
-  position: fixed;
-  inset: 0 0 auto;
+  position: sticky;
+  top: 0;
   z-index: 20;
-  height: var(--header);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
+  justify-items: center;
+  gap: 0.75rem;
+  min-height: var(--header);
+  height: auto;
+  padding: 0.85rem 1rem;
   background: var(--bg);
   border-bottom: 3px solid var(--blue);
 }
 
 .header-spacer {
-  height: var(--header);
+  display: none;
+}
+
+section[id] {
+  scroll-margin-top: 9rem;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  justify-self: start;
   gap: 0.4rem;
   font-size: 1.6rem;
   font-weight: 800;
@@ -171,9 +178,14 @@ button {
 }
 
 .nav-desktop {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.65rem 1.15rem;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .nav-desktop a,
@@ -188,8 +200,8 @@ button {
 }
 
 .menu-toggle {
+  display: none;
   color: var(--blue);
-  display: grid;
   place-items: center;
 }
 
@@ -204,9 +216,7 @@ button {
 }
 
 .nav-mobile.open {
-  display: flex;
-  position: relative;
-  z-index: 19;
+  display: none;
 }
 
 .nav-mobile a {
@@ -218,35 +228,21 @@ button {
   border-bottom: 3px solid var(--blue);
 }
 
-@media (min-width: 480px) {
-  .nav-mobile.open a {
-    width: 200px;
-    text-align: left;
-    border-bottom: 0;
-    border-left: 3px solid var(--blue);
+@media (min-width: 960px) {
+  .site-header {
+    grid-template-columns: 1fr auto 1fr;
+    height: var(--header);
+    padding-block: 0;
   }
 
-  .nav-mobile.open {
-    position: fixed;
-    top: var(--header);
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background: var(--bg);
-    border-bottom-left-radius: 0.5rem;
-    overflow: hidden;
-  }
-}
-
-@media (min-width: 768px) {
   .nav-desktop {
-    display: flex;
+    grid-column: 2;
+    width: auto;
+    flex-wrap: nowrap;
   }
 
-  .menu-toggle,
-  .nav-mobile,
-  .nav-mobile.open {
-    display: none;
+  section[id] {
+    scroll-margin-top: 5.5rem;
   }
 }
 
@@ -268,6 +264,14 @@ button {
   font-size: 2.25rem;
   font-weight: 800;
   line-height: 1.15;
+}
+
+.cipher {
+  white-space: pre;
+}
+
+.cipher .on {
+  color: var(--blue);
 }
 
 .hero-copy p {
